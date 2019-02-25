@@ -45,3 +45,43 @@ Zonas Térmicas
 Al trabajar en un modelo energético, los edificios son descritos utilizando zonas tridimensionales creadas en un entorno gráfico. Cada zona representa un espacio térmicamente distinto. Por lo tanto, un edificio puede ser tratado como una sola zona térmica, o puede ser estudiado más a detalle al descomponerlo y caracterizar cada espacio interior como una zona térmica independiente. Honeybee incluye herramientas para crear estas zonas a partir de geometría tridimensional modelada en Rhino. Cada zona es modelada como una forma 3D, delimitada por múltiples superficies que encierran un volumen; Honeybee asigna propiedades físicas para cada una de estas superficies. Las ventanas y puertas son tratadas como sub-elementos que 'pertenecen' a una superficie específica dentro de una zona.
 
 Las zonas son la únidad básica de análisis. Para rastrear el calor que se desplaza desde y hacia cada zona, a través de un periodo de tiempo (i.e. un año completo), la simulación correrá en pasos de tiempo (i.e. intervalos de 10 minutos). A medida que una simulación va siendo ejecutada, características específicas serán calculadas y asignadas para cada uno de estos pasos de tiempo. Por ejemplo, es posible referirse a los datos climáticos para simular las condiciones en el exterior de una zona, como la temperatura hora-por-hora del aire exterior. También podemos simular condiciones en el interior de la zona, empleando datos de entrada como horarios de ocupación o de utilización de equipamiento. Es posible también especificar cómo el equipamiento responderá a estas condiciones interiores y exteriores, por ejemplo especificando temperaturas de consigna interiores.
+
+Cálculos de Simulación
+----------------------
+
+Una vez que hemos empleado Honeybee para introducir toda la información que deseamos considerar, indicaremos a Honeybee que es momento de 'correr' nuestra simulación. En este punto, Honeybee manda los datos de entrada arriba descritos como un conjunto de instrucciones para OpenStudio, que a su vez envía estas instrucciones al motor de cálculo EnergyPlus. El motor de cálculo recorrerá entonces cada paso de tiempo a través del periodo de análisis especificado y regresará datos de salida de vuelta para Honeybee. Honeybee incluye herramientas para analizar estos resultados. Por ejemplo, es posible extraer métricas específicas, visualizar el balance térmico en cada zona, comparar zonas entre sí y agregar resultados de múltiples zonas.
+
+Analizando los Resultados
+-------------------------
+
+A medida que analizamos los resultados, evaluaremos si éstos son razonables e identificaremos cuáles factores contribuyen más al uso de energía de nuestro edificio. Una vez que la simulación y el análisis han sido completados, estableceremos un ciclo completo de retroalimentación por medio del cual podemos empezar a alterar el diseño y evaluar el impacto de estas modificaciones en el desempeño.
+
+¿Por Qué Crear un Modelo Energético en Primer Lugar?
+----------------------------------------------------
+
+1. Para informar el diseño
+2. Anticipar el uso de energía
+3. Respardar con argumentos convincentes ideas de diseño
+4. Desarrollar una intuición constructiva
+5. Realizar análisis de sensitividad
+6. Calcular periodos de retorno de inversión para medidas de conservación de energía (MCEs)
+7. Cumplir con códigos y normatividad de edificación
+8. Validar el cumplimiento con certificaciones de terceros, como LEED, BREAM o DGNB
+
+Esta guía es suficiente para cumplir con los primeros cinco objetivos, pero los detalles específicos para calcular periodos de retorno de inversión y para crear modelos de validación normativa, se encuentran fuera del alcance de este tutorial.
+
+¿Qué Resultados Puedo Esperar?
+------------------------------
+
+Depende. Existen múltiples métricas que pueden ser extraídas de una simulación energética, cada una refiriéndose a aspectos específicos del desempeño energético de un edificio.
+
+![alt text](https://user-images.githubusercontent.com/44324576/51490305-2e01e500-1dab-11e9-924c-90c3c64b662b.png "The World of Metrics")
+
+El resultado más frecuentemente utilizado es el Diagrama de Balance de Energía, el cual representa la energía moviéndose desde y hacia el edificio. Esto es fundamental para la Primera Ley de la Termodinámica, la cual establece que la energía no puede ser creada ni destruida. El calor que se desplaza en un edificio puede incluir el calor generado por las personas, calor disipado por equipo de cómputo o de procesos, calor proveniente de bombillas incandescentes, calor solar a través de las ventanas y calor proveniente de sistemas de climatización artificial. Las pérdidas de calor pueden ser resultado de la conducción a través de la envolvente, aire frío filtrándose por las paredes o siendo inyectado por sistemas de ventilación. Todos estos mecanismos de transmisión de calor son contabilizados en un diagrama de balance:
+
+![alt text](https://user-images.githubusercontent.com/44324576/49155416-2c6fef80-f31b-11e8-88c3-f52a9aa72e7b.JPG "Energy Balances")
+
+Nota Acerca de la Iluminación Natural
+-------------------------------------
+
+Las simulaciones energéticas basadas en EnergyPlus toman en cuenta la geometría específica de un edificio, así como el movimiento aparente del sol. No obstante, si estás interesado en simulaciones de iluminación natural que arrojen niveles específicos de iluminación interior, entonces es necesario buscar otras opciones. Este tipo de simulaciones pueden ser ejecutadas utilizando Honeybee, pero para llevarlas a cabo es necesario utilizar el motor de cálculo Radiance, el cual no está incluido en esta guía. Existen planes para desarrollar una guía wiki para iluminación natural, pero hasta Enero de 2019, ésta aún no ha sido desarrollada.

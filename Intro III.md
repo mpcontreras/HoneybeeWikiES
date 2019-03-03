@@ -38,4 +38,16 @@ Para ayudarte a localizar componentes, comenzaremos refiriéndonos a ellos usand
 Si encuentras un componente que no reconoces, hay un par de cosas que puedes hacer:
 
 + Puedes mover el ratón sobre el ícono en el centro del componente para ver el nombre del componente.
-+Si el componente está fuera de Ladybug y Honeybee, puedes también presionar y sostener ctrl+ alt al mismo tiempo para activar el modo informativo. Esto te muestra la ubicación en el menú de los componentes que ya se encuentran en el lienzo. Desafortunadamente, para Ladybug y Honeybee, esto solamente indicará hacia un componente Python.
+
++ Si el componente está fuera de Ladybug y Honeybee, puedes también presionar y sostener ctrl + alt al mismo tiempo para activar el modo informativo. Esto te muestra la ubicación en el menú de los componentes que ya se encuentran en el lienzo. Desafortunadamente, para Ladybug y Honeybee, esto solamente indicará hacia un componente Python.
+
++ Un método alternativo para componentes dentro de Ladybug y Honeybee es hacer doble clic en el ícono del componente de Ladybug o Honeybee, lo que abrirá el código en su interior. Posteriormente, debes desplazarte hasta encontrar la línea que empieza con 'ghenv.Component.SubCategory =' la cual deberá estar seguida por algo parecido a '07|Energy|Schedule'. Esto funciona de la misma manera que la dirección anterior, así que en este caso sabemos que el componente está ubicado en la pestaña 7 bajo 'Energy' y que se llama Honeybee_Schedule.
+
++ Si prefieres ver nombres en vez de íconos, también es posible acceder a la pestaña 'Display' en la barra de menú de Grasshopper y modificar la opción 'Display Icons', de manera que se desplegará el nombre del componente en vez del ícono.
+
++ También es posible hacer doble clic en el lienzo de Grasshopper y empezar a teclear el nombre de un componente para buscar en todas las pestañas de Grasshopper. Todos los componentes de Honeybee y Ladybug incicial ya sea con 'Honeybee' o 'Ladybug', de manera que empezando con alguna de esas palabras clave es una forma de buscar solo dentro de nuestros plugins.
+
++ Otra herramienta muy útil es el componente 'Bifocals', el cual crea una etiqueta encima de cada componente de manera que sea posible para ti ver tanto el ícono de un componente como su nombre. El componente 'Bifocals' está disponible en <https://www.food4rhino.com/app/bifocals>.
+
+Creando una Definición de Honeybee
+----------------------------------

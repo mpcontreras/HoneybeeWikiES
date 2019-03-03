@@ -27,7 +27,7 @@ Grashopper es un lenguaje visual de escritura que está disponible a manera de *
 
 **ii.04** Repetir el paso anteriorpara crar el segundo parámetro de punto que será utilizado para el final de nuestra línea.
 
-![alt text](https://user-images.githubusercontent.com/44324576/49116783-f725bc00-f29e-11e8-90a8-48d6bf10e9e0.JPG
+![alt text](https://user-images.githubusercontent.com/44324576/49116783-f725bc00-f29e-11e8-90a8-48d6bf10e9e0.JPG)
 
 **ii.06** Cambiar el nombre del primer punto haciendo click derecho en el componente de punto en el lienzo y escribiendo 'Start Point' (sin comillas) en el primer recuadro de entrada. Es una buena práctica mantener el tipo de parámetro en el nombre del componente, como en 'Start Point" o "End Point", en vez de simplemente 'Start' o 'End'. Esto obedece a que los componentes aceptan sólo tipos específicos de datos como entrada, y es importante mantener estos tipos de datos por separado. Un componente que trabaja con puntos no puede aceptar curvas, superficies o sólidos como datos de entrada.
 

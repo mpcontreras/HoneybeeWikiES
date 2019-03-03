@@ -76,3 +76,52 @@ Grashopper es un lenguaje visual de escritura que está disponible a manera de *
 **ii.15** Una línea roja debe ahora aparecer entre los dos puntos en Rhino. Esta es solamente una pre-visualización y no será posible seleccionar esta línea en Rhino. Es importante hacer notar que esta línea no ha sido guardada en Rhino y ésta desaparecería cuando Grasshopper fuese cerrado. Este comportamiento ocurre para mantener a Grasshopper corriendo de manera ágil; si toda la geometría generada se guardara inmediatamente en Rhino el programa correría muy lentamente.
 
 ![alt text](https://user-images.githubusercontent.com/44324576/49116800-fab94300-f29e-11e8-8a79-568a0be092f5.JPG)
+
+**ii.16** Hasta este punto, hemos simplemente reproducido una línea en Rhino mediante Grasshopper. No obstante, ahora mostraremos cómo este mismo script puede modificarse para crear múltiples líneas entre múltiples puntos: dibuja a continuación seis puntos adicionales en Rhino.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49116801-fb51d980-f29e-11e8-965a-cc3efcbd5cda.JPG)
+
+**ii.17** En Grasshopper, presiona clic derecho sobre el componente 'Start Point' y selecciona 'Set Multiple Points'.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49116803-fbea7000-f29e-11e8-933b-e6dd6c0bee68.JPG)
+
+**ii.18** Selecciona los tres puntos cerca del punto inicial, así como el punto inicial mismo. Podrías observar una flecha auxiliar azul, esto indica la secuencia de selección de los puntos. Observa que ahora hay una línea roja entre cada uno de estos puntos y el punto final original.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49116806-fbea7000-f29e-11e8-9aff-7ad1f2a198fd.JPG)
+
+**ii.19** Esto se debe debido a que el 'cubo' incial 'Start Point' contiene ahora cuatro puntos. Podemos observar esto utilizando el componente 'Panel', ubicado en la pestaña 'Params' de Grasshopper en la sección 'Input'. Arrastra un panel dentro del lienzo.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49118422-68b43900-f2a4-11e8-8f49-39c94158ae6a.JPG)
+
+**ii20.** Al conectar los datos de salida del 'cubo' 'Start Point' al nuevo componente de panel se despliega la lista de puntos contenidos en el componente 'Start Point'. Es posible apreciar que contiene cuatro puntos referenciados, numerados del 0 al 3. Un segundo componente panel muestra que el componente 'End Point' contiene únicamente un punto referenciado.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49116808-fc830680-f29e-11e8-95b8-8308ef2e8896.JPG)
+
+**11.21** Si asignamos múltiples puntos al componente 'End Point', es posible apreciar que la secuencia con la que los puntos fueron asignados es relevante al momento de hacer corresponder los puntos entre los componentes 'Start Points' y 'End Points'.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49116810-fc830680-f29e-11e8-9905-bfde408e5b32.JPG)
+
+**ii.22** Ahora hay cuatro puntos en el componente 'Start Points' y cuatro puntos en el componente 'En Point'.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49116809-fc830680-f29e-11e8-872f-381fa05c79d6.JPG)
+
+**ii.23** Observa que esto resulta en cuatro líneas en el componente 'Line'.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49116811-fd1b9d00-f29e-11e8-9273-7df137475017.JPG)
+
+**ii.24** Si deseamos transferir estas líneas de vuelta a Rhino, debemos hacer clic derecho en el componente 'Line' y seleccionar 'Bake'. Esto grabará las líneas creando cuatro objetos de línea en la capa activa de Rhino.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49119770-065e3700-f2aa-11e8-9c0f-d1388198ab2b.JPG)
+
+**ii.25** La pre-visualización de Grasshopper puede ser apagada o encendida utilizandolos controles que se muestran en la siguiente imagen. EL ícono mitad verde es particularmente útil, ya que pre-visualizará solamente los componentes que selecciones en el lienzo de Grasshopper. Esta es una buena herramienta para verificar que has referenciado solamente la geometría que pretendías, así como para identificar problemas rápidamente o aislar un comportamiento no deseado.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49161164-92af3f00-f328-11e8-82cd-22c3ce11826e.png)
+
+Esto concluye la introducción a Grasshopper. Ahora deberás estar familiarizado con lo siguiente:
+
+1. Cómo crear un script sencillo de Grasshopper
+2. Cómo referenciar geometría desde Rhino en Grasshopper (ii.07)
+3. El concepto de cómo trabajar con listas (ii.20)
+4. Grashopper ejecuta todos los cálculos de izquierda a derecha (ii.13)
+5. Cómo 'hornear' geometría desde Grasshopper a Rhino (ii.24)
+6. Verificar la geometría referenciada utilizando las herramientas de pre-visualización de Grasshopper (ii.25)

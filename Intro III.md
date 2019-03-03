@@ -118,4 +118,23 @@ El siguiente link contiene información sobre el origen y la generación de esto
 
 ![alt text](
 
-**iii.13**
+**iii.13** El siguiente dato de salida provee más información acerca de la ubicación como el nombre de la localidad, latitud, longitud, zona horaria y elevación. La zona horaria es expresada por el número de horas de direfencia desde Greenwich, Reino Unido. Los valores positivos significan este, los valores negativos el oeste. La elevación está en metros sobre el nivel del mar.
+
+![alt text](
+
+**iii.14** Todos los datos de salida siguientes contienen datos horarios. Observemos la temperatura de bulbo seco como ejemplo.
+
+Las primeras siete entradas contienen información acerca de los datos, mientras que los siguientes 8760 valores representan una serie de datos para cada una de las horas de un año. La convención para listas en Grasshopper indica que se empiece a numerar en 0, así que una lista de 7 elementos leerá valores desde la posición 0 hasta la 6.
+
++ El valor 0 es una clave
++ El valor 1 es el nombre de la ubicación
++ El valor 2 es el tipo de datos
++ El valor 3 son las unidades de los datos
++ El valor 4 es la frecuencia a a que fue registrado
++ Los valores 5 y 6 representan el periodo de tiempo sobre el que los datos fueron recopilados. El formato utilizado es mes del año, día del mes y hora del día. Así que podemos ver que estos datos fueron recopilados a partir del primero de enero a la primer hora del día entre 00:00-01:00, hasta el 31 de diciembre en lahora 24 del día, entre las 23:00-00;00
+
+![alt text](
+
+**iii.15** Intenta desplazarte por los 8760 valores arrastrando la barra de desplazamiento color amarillo oscuro (marcada con un gran punto rojo más abajo)
+
+

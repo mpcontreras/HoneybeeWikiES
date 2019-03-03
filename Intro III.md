@@ -51,3 +51,36 @@ Si encuentras un componente que no reconoces, hay un par de cosas que puedes hac
 
 Creando una Definición de Honeybee
 ----------------------------------
+
+**iii.00** El primer paso para crear cualquier script de Honeybee es *siempre* colocar el componente Honeybee_Honeybee en el lienzo. Esto es importante porque este component contiene múltiples librerías internas que son necesarias para el funcionamiento de casi todos los demás componentes de Honeybee. A diferencia de casi todos los scripts en Grasshopper, no es necesario conectar un cable entre el componente Honeybee_Honeybee y otros componentes; las librerías se activan simplemente al colocarlo en el lienzo. Este componente se localiza en la pestaña '0 Honeybee|Honeybee' y a la acción de colocar este componente en el lienzo se le conoce como 'echar a volar Honeybee'.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49170763-2d197d80-f33d-11e8-96fb-ca46f7fa79df.png)
+
+**iii.01** Muchos componentes de Honeybee funcionan conjuntamente con componentes de Ladybug, así que *casi siempre* es necesario echar también a volar Ladybug. Puedes encontrar el componente Ladybug_Ladybug en la pestaña Ladybug, en la sección 0.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49170767-2db21400-f33d-11e8-8269-ddf02cd3f166.png)
+
+**iii.02** El siguiente paso crucial antes de empezar a crear una simulación es asegurarse que contamos con datos climáticos adecuados en los que se basará nuestra simulación. Para esto requerimos de una conexión a internet. Para empezar, encuentra la sección 0 de Ladybug y arrastra el component 'Open EPD and STAT Weather File' al lienzo.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49170768-2db21400-f33d-11e8-993e-66d13f1727ab.png)
+
+**iii.03** Este componente descargará automáticamente los datos climáticos desde el internet a partir de una URL proporcionada por el usuario. Utilizaremos un componente panel para ingresar la dirección buscada.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49170769-2db21400-f33d-11e8-8461-b6c947b936a5.JPG)
+
+**iii.04** Haz doble clic en el componente panel y pega la siguiente URL, sin espacios antes o después:
+
++ <https://www.energyplus.net/weather-download/north_and_central_america_wmo_region_4/USA/CA/USA_CA_Van.Nuys.AP.722886_TMY3/all>
+
+Es importante evitar presionar ENTER después de ingresar el texto en el componente panel, ya que Grasshopper interpreta ENTER como la creación de un segunto ítem en la lista de datos dentro del panel. Para aclaraciones sobre listas de datos, consulta el paso 2.20.
+
+Estos datos provienen del Departamento de Energía de los Estados Unidos y corresponden al aeropuerto de Van Nuys, California. Al pasar el cursor sobre este componente es posible obtener más detalles sobre cómo encontrar más datos para otras ubicaciones. De igual manera pueden encontrarse y descargarse directamente del siguiente link: <https://www.energyplus.net/weather>.
+
+El siguiente link contiene información sobre el origen y la generación de estos datos: <https://energyplus.net/weather/sources>.
+
+![alt text](https://user-images.githubusercontent.com/44324576/49170770-2e4aaa80-f33d-11e8-9a83-fa2d5160dc66.JPG)
+
+*Consejo sobre paneles: Utilizaremos paneles para ingresar información frecuentemente. En vez de arrastrar un panel al lienzo cada vez, simplemente haz doble clic en el lienzo y escribe '//' seguido de los datos que quieras introducir en el panel.
+
+**iii.05** 
+

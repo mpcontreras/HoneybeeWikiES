@@ -82,5 +82,40 @@ El siguiente link contiene información sobre el origen y la generación de esto
 
 *Consejo sobre paneles: Utilizaremos paneles para ingresar información frecuentemente. En vez de arrastrar un panel al lienzo cada vez, simplemente haz doble clic en el lienzo y escribe '//' seguido de los datos que quieras introducir en el panel.
 
-**iii.05** 
+**iii.05** Conecta el panel que contiene la URL del archivo de datos climáticos deseados al puerto de entrada 'weatherFileURL' del componente 'Open EPW and STAT Weather Files'. Notarás que el componente 'Open EPW and STAT Weather files' habrá cambiado de naranja a gris, indicando que ha obtenido los datos climáticos sin errores.
 
+![alt text](
+
+**iii.06** Si conectas un panel a la salida 'epwFile' del componente'Open EPW and STAT Weather files' y pasas el cursor por encima del texto 'epwFile', verás que Ladybug ha descargado el archivo EPW y lo ha guardado en tu disco local. La ubicación por defecto es: c:\ladybug.
+
+![alt text](
+
+**iii.07** Estos datos climáticos pueden ahora ser usados para múltiples simulaciones. Concluiremos este tutorial demostrando cómo explorar los datos que acabas de importar. Empecemos arrastranto un componente 'Ladybug_Import EPW" hasta el lienzo.
+
+![alt text](
+
+**iii.08** Posteriormente, conecta los datos que acabamos de descargar a este componente. Esto nos permitirá recorrer los distintos tipos de datos contenidos en el archivo inicialmente importado.
+
+![alt text](
+
+**iii.09** El componente 'Ladybug_Import EPW' deberá cambiar ahora de naranja a gris, indicando que los datos climáticos fueron recopilados sin errores.
+
+![alt text](
+
+**iii.10** Ahora podemos acceder a los distintos tipos de datos contenidos en el archivo EPW, conectemos paneles a los primeros cuatro datos de salida y demos un vistazo más cercano a la información ahora disponible.
+
+![alt text](
+
+**iii.11** El puerto de salida 'readMe!' provee valiosa información acerca de si el componente funcionó correctamente. Esto es particularmente importante si el componete se vuelve naranja, lo que inidica que hubo un error.
+
+![alt text](
+
+*Nota cómo desconectando la dirección URL que hemos ingresado antes afecta estos datos de sallida.
+
+![alt text](
+
+**iii.12** La latitud proveerá la latitud en la que los datos fueron recopilados. Esto es extremadamente importante para confirmar la precisión de la geometría solar.
+
+![alt text](
+
+**iii.13**

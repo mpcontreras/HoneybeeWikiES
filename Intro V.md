@@ -64,7 +64,7 @@ Actualmente existen dos versiones de Honeybee, Honeybee Legacy y Honeybee Plus. 
 
 En cuanto a las actualizaciones, mantente usando la versión más actualizada a menos que tengas un problema/bug de considerable gravedad. Limita las actualizaciones automáticas de ser posible, ya que esto hace difícil distinguir qué versión es la que funcionó correctamente de manera más reciente. Las actualizaciones son especialmente problemáticas al trabajar en grandes organizaciones como escuelas y oficinas ya que crean inconsitencias entre los usuarios.
 
-Para Estudios Paramétricos
---------------------------
+Para Estudios Paramétricos:
+---------------------------
 
 Siempre cuestiona el flujo de trabajo antes de construirlo. Determina cuándo estás resolviendo un problema 1D comparado con uno 2D. Recuerda que toma exponencialmente más tiempo para cada dimensión de un problema. si deseas estimar el tiempo necesario para una serie de cálculos, deberás tomar el promedio de una muestra representativa de varias simulaciones en vez de tomar una sola y multiplicarla.

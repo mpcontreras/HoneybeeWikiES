@@ -20,7 +20,7 @@ Aquí puedes encontrar una *cheatsheet* (i.e. chuleta, acordeón, machete, torpe
 
 Es importante notar que al usar MArkdown es necesario distinguir entre algunos caracteres que especifican formato en Markdown y caracteres que de hecho queremos representar en la guía. Por ejemplo, un guion bajo al lado de una palabra indica ítalicas en Markdown. Sin embargo, la convención en Honeybee es usar el guion bajo al frente para indicar datos de entrada necesarios y un guion bajo detrás para indicar datos de entrada opcionales. Esto puede solucionarse al utilizar una diagonal invertida entre dos guiones bajos, lo cual cancela el comando para representar itálicas.
 
-+ Por ejemplo, en Markdown: '\_RADMaterial\_' debe escribirse '\_\_RADMaterial\_\_'; de otra manera se mostraría como '_RADMaterial_'.
++ Por ejemplo, en Markdown: '\_RADMaterial\_' debe escribirse '\_RADMaterial\_'; de otra manera se mostraría como '_RADMaterial_'.
 
 Formato
 -------

@@ -1,3 +1,6 @@
+Comparación de Estrategias Pasivas
+==================================
+
 Bienvenido al tutorial de comparación de estrategias pasivas. Este tutorial expande sobre los conceptos del tutorial de [Modelo de Zona Unitaria](https://github.com/mpcontreras/honeybee-wiki/blob/master/Single-Zone-Model), explicando además cómo modificar ese modelo para comparar la efectividad de instalar ventans de alto desempeño, definir sistemas de sombreado, reemplazar luminarias, abrir ventanas para ventilar un espacio, así como modelar ventilación nocturna usando el aire más frío.
 
 **Descarga el archivo de ejemplo:** [comparando estrategias pasivas en Hydra](http://hydrashare.github.io/hydra/viewer?owner=alexandermatthias&fork=hydra&id=ComparingPassiveStrategies_00_AllStrategies&slide=0&scale=1&offset=0,0)
